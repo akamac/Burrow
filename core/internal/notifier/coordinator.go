@@ -375,6 +375,7 @@ func (nc *Coordinator) sendEvaluatorRequests() {
 							Reply:   nc.evaluatorResponse,
 							Cluster: sendCluster,
 							Group:   sendConsumer,
+							ShowAll: true,
 						}
 					}(cluster, consumer)
 					groupInfo.LastEval = timeNow
